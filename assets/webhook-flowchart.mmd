@@ -1,4 +1,0 @@
-flowchart TD
-  A["External Service<br/>(e.g. Stripe, GitHub)"] -->|"1. Event Occurs"| B["Sends HTTP POST<br/>to your webhook URL"]
-  B -->|"2. Your App Receives Webhook"| C["Processes Data<br/>(e.g. update DB, send email)"]
-  C -->|"3. Responds 200 OK"| D["External Service<br/>knows delivery succeeded"] 

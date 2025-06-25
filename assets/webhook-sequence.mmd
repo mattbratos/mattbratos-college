@@ -1,6 +1,0 @@
-sequenceDiagram
-  participant Service as "External Service"
-  participant YourApp as "Your App"
-  Service->>YourApp: POST /webhooks/payment<br/>with event data
-  YourApp-->>Service: 200 OK
-  Note right of YourApp: Processes webhook<br/>and triggers actions 
