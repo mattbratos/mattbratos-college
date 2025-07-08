@@ -93,7 +93,7 @@ PS: I wrote a guide on how to start a company in the US remotly [here](www.examp
 ### Investment amount 
 There is no legaly minimum required amount but I found this pic on reddit in this [discussion](https://www.reddit.com/r/e2visa/comments/1d28fi0/how_much_does_one_need_to_invest_for_e2_visa/)
 
-![hackerlight](../assets/e2/budget.webp)
+![budge-meter](../assets/e2/budget.webp)
 
 ## 📚 Resources
 
