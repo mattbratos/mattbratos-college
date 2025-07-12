@@ -7,74 +7,98 @@ tags:
   - visa options
   - entrepreneurs
 ---
+## intro
+Hi Hackers 👋
 
-## why this guide exists
+In this guide I'm gonna tell about how you can move to the US and legally live and run your startup here.
 
-I wanted to move to the US since I was a kid, but the immigration system was always super confusing. So I decided to write a short guide that will hopefully save you some time learning about possible options.
+## about me
+I'm a startup founder and I wanted to move to the US for like a decade now.
+I did hundreds of hours of research on all possible legal paths and I finally found a way to move to San Francisco.
+I also learned about majority of ways people are doing that so I decided to write this guide to save you some time.
 
-This guide is only a brief overview about types of visas you can get and which of them is the best in your situation. 
+Right now I'm still in Warsaw, Poland but in September I'm going to San Francisco for 3 months to fundraise and hopefully from the new year I'm moving there for good.
+I'm not a lawyer, it's not a legal advice I will just tell you what worked for me and what I learned along the way.
+So if you also want to move to San Francisco to build your startup this guide is for you.
 
-If you want a shortcut just fill this prompt and ask woz 🙃
+## top 3 visa choices
 
-<details>
-<summary>📋 prompt</summary>
+| Visa   | Who it's for                         | Description                            | Legal Fees   | Investment     | Processing Fees | Time to Get      | Stay Duration       | More Info |
+|--------|--------------------------------------|----------------------------------------|--------------|----------------|------------------|------------------|----------------------|-----------|
+| ESTA   | early-stage founders exploring SF    | short trip to test the waters          | $0           | $0             | ~$21             | instant           | 90 days              | [link](https://esta.cbp.dhs.gov/) |
+| O-1    | high-profile hackers with credibility| for founders with press, funding, etc. | $5k–10k      | $0             | $460–2500        | 2–4 weeks (premium) | 3 years + renewals    | [link](https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement) |
+| E-2    | solo founders from treaty countries  | own a US company and invest in it      | $4k–8k       | $100k+ (your $)| ~$500            | 1–3 months         | 2–5 years + renewals | [link](https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-treaty-investors) |
 
-I am a [COUNTRY] citizen, [AGE] years old.
-My goal: [move as founder / move as employee / other: ___].
-I currently [own/do not own] a company.
-I can personally invest [$AMOUNT] of my own money in the US.
-My experience: [YEARS] in [FIELD].
-Highest education: [YOUR DEGREE or 'none'].
-Notable achievements: [List any—patents, press, awards, published work, etc. If none, just write 'none'].
-I want the fastest, easiest, and cheapest way to get to the US. What type of visa should I get?
+## 🧳 ESTA — The Vybe Check Visa
 
-</details>
+ESTA (or B-1/B-2) is a super lightweight way to land in the US legally and explore.
 
+**Best for:** First-time trip to SF, meeting investors, attending YC week, networking, conferences.
 
-## choose your adventure
+You **can’t work or earn money**, but you can do a lot of relationship-building. If you’re not sure if SF is for you—this is your move.
 
-Split it by your goal:
+- ✅ No interview
+- 💻 Apply online
+- 🕒 90 days max
+- ❌ Can’t extend
+- 🤑 ~$21
+- 🌍 [List of ESTA Countries](https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html)
+- 🔗 [Apply for ESTA](https://esta.cbp.dhs.gov/)
 
-### 1. 💫 Vybe check (1–12 weeks)
+**Pro tip:** Plan it like a mission. Land, crush meetings, take notes, don’t overstay.
 
-Just wanna see if SF is your thing? These are short-term ways in:
+PS: If you are from a country that is not eligible for ESTA you still can apply for [B-1/B-2](https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html/visa)
 
-- B1/B2 – Business or tourist visa. Good for short visits and meetings. Don’t overstay.
-- ESTA – Visa waiver for certain countries (90 days max, no extensions).
+---
 
-### 2. ✈️ Temporary move (1–5 years)
+## 🧠 O-1 — The "Extraordinary Founder" Visa
 
-Wanna work or build in the US but can't get a green card yet? Use one of these:
+This is the visa you *really* want. If you’ve got some traction—like YC, Techstars, funding, press, patents, open source—this may be your golden ticket.
 
-- E-2 – Invest $50k-150k in your own startup. Only works if your country has a treaty.
-- L-1 – Transfer from your foreign company to its US office.
-- O-1 – You’re a badass with awards, press, or major work. No investment needed.
-- H-1B – Classic work visa. Needs a US sponsor and luck in the lottery.
-- TN - Fast-track for Canadian and Mexican pros.
+USCIS lets your own **Delaware C-Corp sponsor you**, so you don’t need a job offer anymore. Massive unlock for founders.
 
-### 3. 🏡 Move for good (Green card routes)
+**Best for:** Mid-stage founders who’ve done some cool stuff and can prove they’re top of their field.
 
-These give you permanent residence (aka green card):
+- ✅ Legal to work on your startup
+- ✅ Path to EB-1 green card
+- 🔁 Renewable
+- 🧾 Need strong documentation (press, VC, awards, etc.)
+- 💵 ~$5–10K in legal fees + filing
+- 🕒 15 days (with premium processing)
+- 📌 Must hit at least 3 of 8 criteria (USCIS has a checklist)
+- 🔗 [O-1 Info & Criteria](https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement)
 
-- EB-5 – Invest $800k–$1M in a US biz. Clean path, but expensive.
-- EB-1A – O-1 but permanent. For top-tier founders with major credentials.
-- EB-2 NIW – Prove your work benefits the US. More flexible than EB-1.
-- EB-1C – Big shot execs moving from international HQ to US branch.
+**Pro tip:** Start building your O-1 case even if you're not applying yet. Save every press mention, funding announcement, letter of recommendation, award, patent, etc.
+
+---
+
+## 💼 E-2 — The Cheat Code for Treaty Country Founders
+
+This is how I’m doing it.
+
+If you're from an E-2 treaty country (like Poland, UK, Germany, Japan, etc.) and you’ve got **$100k+ of your own money** you can invest into a US startup—you can *buy your way into the US legally*.
+
+**Best for:** Solo founders or small teams who want to bootstrap into the US ecosystem quickly.
+
+- ✅ No “extraordinary ability” required
+- ✅ Spouse gets work permit
+- 🔁 Renewable indefinitely (as long as business runs)
+- 💼 Need to own 50%+ of a real US business
+- 💸 Must invest *your* money (not VCs)
+- 🏠 Can’t be passive—you have to actively run the business
+- 💵 ~$5–8K in legal + $100k+ investment
+- 🕒 ~1–3 months via US consulate interview
+- 🌍 [List of E-2 Treaty Countries](https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/treaty.html)
+- 🔗 [E-2 Visa Info](https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-treaty-investors)
+
+**Pro tip:** You can spend part of that $100k on real things—website, laptops, legal, tools, marketing, etc. Just keep clean records and receipts.
+
+---
 
 ## next steps
 
-Figure out what you need, then dive deep into 1–2 options.
+Do some more research, work on your startup and remember that moving to the US takes a long time and millions of people are trying to do it :)
 
-In my situation (european solo founder, mvp build, no revenue, no big investors, no employees) I choosed E-2 because it was the easiest, fastest and the most reliable option. 
+If you want some help with your startup journey or just get a beer in SF [my DM's on x are open](https://x.com/mattbratos)
 
-I wrote a full guide on how to get the E-2 visa [here](e2-visa-101.md)
-
-## 🧠 hacker takeaway
-
-US immigration is hard, but not impossible. If you’re serious, start with your goals and work backward. Most founders either:
-- Start with a vybe check on ESTA or B1/B2
-- Do medium-term move (O-1 or E-2)
-
-## PS
-
-*This is general information only. Always consult with immigration attorneys for advice specific to your situation. I've done some research and wanted to share info but some of this probably is wrong, I'm not a layer and just sharing thoughts online. It's not the best guide, feel free to improve it and submit a pr on gh or write your own :)*
+*This is general information only. Always consult with immigration attorneys for advice specific to your situation. I've done some research and wanted to share info but some of this probably is wrong, I'm not a lawyer and just sharing thoughts online. It's not the best guide, feel free to improve it and submit a pr on gh or write your own :)*
