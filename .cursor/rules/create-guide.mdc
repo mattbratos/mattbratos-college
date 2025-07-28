@@ -1,0 +1,45 @@
+---
+name: create-guide
+trigger: "@create-guide"
+description: "Interactive guide creation workflow"
+---
+
+## Quick Questions 🎯
+1. **Who's this for?** 👥 (beginners/experts?)
+2. **Learning style?** 🧠 (hands-on/theory?)  
+3. **Build something?** 🛠️ (project/demo?)
+4. **Length?** ⏱️ (quick/deep?)
+5. **Format?** 📝 (code examples/images?)
+
+## Workflow ⚡
+1. Ask questions → outline → approval → write guide
+2. Save in `guides/` folder as `.mdx`
+3. Always add frontmatter with title, description, tags
+
+## Template 🏗️
+```
+---
+title: Guide Title
+description: What this teaches
+tags:
+  - relevant
+  - tags
+---
+
+# Guide Title
+Brief intro + what you'll learn
+
+## Overview 🔍
+Quick summary, requirements, benefits
+
+## Step-by-Step 🛠️
+Numbered action steps
+
+## My Story 🧪 (optional)
+Personal experience/results
+
+## Resources 📚
+Links, tools, references
+```
+
+Use examples from `example.mdx` for formatting options (code blocks, tables, videos, etc.)

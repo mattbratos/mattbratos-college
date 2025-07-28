@@ -1,0 +1,85 @@
+---
+name: create-course
+trigger: "@create-course"
+description: "Interactive course creation workflow"
+---
+
+## Quick Questions 🎯
+1. **Who's this for?** 👥 (beginners/intermediate/experts?)
+2. **What's the topic?** 📚 (subject + skill level)
+3. **Course length?** ⏱️ (quick 3-5 chapters vs deep 10+ chapters?)
+4. **Learning style?** 🧠 (hands-on exercises/theory/projects?)
+5. **Prerequisites?** 🔧 (what should they know first?)
+
+## Workflow ⚡
+1. Ask questions → create outline → approval → build course
+2. Create folder: `courses/course-name/`
+3. Build `index.md` (course overview) + chapter files
+4. Always add proper frontmatter
+
+## Course Structure 🏗️
+
+### Index File (`index.md`)
+```
+---
+title: Course Title
+description: What this course teaches
+tags:
+  - relevant
+  - tags
+  - skills
+---
+
+# Course Title
+
+## Target Audience 👥
+Who this is for + skill level
+
+## Prerequisites 🔧  
+What they need to know first
+
+## Learning Objectives 🎯
+- What they'll learn
+- Skills they'll gain
+
+## Course Outline 📋
+#### Chapter 1 - Title
+- Objectives: What they'll learn
+- Outline: Key topics covered
+
+[Repeat for each chapter]
+```
+
+### Chapter Files (`chapter-X.mdx`)
+```
+---
+title: chapter-slug-name
+order: X
+---
+
+# Chapter X: Title
+
+Brief intro to chapter
+
+## Section 1
+Content with examples
+
+## Section 2  
+More content
+
+## Practical Exercises 💻
+Hands-on tasks
+
+## Chapter Summary 📝
+Key takeaways
+```
+
+## Course Template Types 🎨
+
+**Quick Course (3-5 chapters):**
+- Overview + Core concepts + Practice + Wrap-up
+
+**Deep Course (8-12 chapters):**
+- Intro + Fundamentals + Advanced topics + Projects + Best practices + Deployment + Next steps
+
+Use examples from `example-course/` for formatting (code blocks, exercises, etc.)

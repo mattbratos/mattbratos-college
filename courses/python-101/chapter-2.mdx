@@ -1,0 +1,274 @@
+---
+title: variables-and-data-types
+order: 2
+---
+
+# Chapter 2: Variables and Data Types 📊
+
+Now that you can print things, let's learn how to store and work with information! Variables are like labeled boxes where you can keep data for later use. 📦
+
+## What are Variables? 🤔
+
+Think of variables as **named storage containers**. Instead of writing the same information over and over, you can store it once and use it many times!
+
+```python
+# Without variables (repetitive!)
+print("Alice is 25 years old")
+print("Alice likes pizza")
+print("Alice lives in New York")
+
+# With variables (much better!)
+name = "Alice"
+age = 25
+favorite_food = "pizza"
+city = "New York"
+
+print(name, "is", age, "years old")
+print(name, "likes", favorite_food)
+print(name, "lives in", city)
+```
+
+## Creating Variables ✨
+
+Creating a variable in Python is super easy:
+
+```python
+# Create variables by assigning values
+my_name = "Your Name"
+my_age = 20
+is_student = True
+
+# Use them in print statements
+print("Hello, my name is", my_name)
+print("I am", my_age, "years old")
+print("Am I a student?", is_student)
+```
+
+**Variable naming rules:**
+- Use descriptive names: `user_age` not `a`
+- Start with letter or underscore: `name` or `_score`
+- Use lowercase with underscores: `favorite_color`
+- No spaces: `first_name` not `first name`
+
+## Python Data Types 🧩
+
+Python has several types of data. Let's explore the main ones:
+
+### 1. Strings (Text) 📝
+Strings are text wrapped in quotes:
+
+```python
+first_name = "Alex"
+last_name = 'Johnson'  # Single or double quotes work!
+message = "Welcome to Python programming!"
+
+print(first_name + " " + last_name)  # Combining strings
+print("Message:", message)
+```
+
+### 2. Integers (Whole Numbers) 🔢
+Integers are whole numbers (positive, negative, or zero):
+
+```python
+score = 100
+temperature = -5
+items_count = 0
+
+print("Your score:", score)
+print("Temperature:", temperature, "degrees")
+print("Items in cart:", items_count)
+```
+
+### 3. Floats (Decimal Numbers) 🔣
+Floats have decimal points:
+
+```python
+price = 19.99
+height = 5.8
+pi = 3.14159
+
+print("Price: $", price)
+print("Height:", height, "feet")
+print("Pi is approximately", pi)
+```
+
+### 4. Booleans (True/False) ✅❌
+Booleans represent True or False:
+
+```python
+is_sunny = True
+is_raining = False
+likes_python = True
+
+print("Is it sunny?", is_sunny)
+print("Is it raining?", is_raining)
+print("Do you like Python?", likes_python)
+```
+
+## Interactive Examples 🧪
+
+Let's try some hands-on examples:
+
+### Example 1: Personal Profile
+```python
+# Create your profile
+name = "Sam"
+age = 22
+height = 5.9
+is_student = True
+favorite_color = "blue"
+
+# Display your profile
+print("=== MY PROFILE ===")
+print("Name:", name)
+print("Age:", age)
+print("Height:", height, "feet")
+print("Student:", is_student)
+print("Favorite color:", favorite_color)
+```
+
+### Example 2: Basic Math with Variables
+```python
+# Store numbers
+first_number = 15
+second_number = 7
+
+# Do calculations
+sum_result = first_number + second_number
+difference = first_number - second_number
+product = first_number * second_number
+
+# Show results
+print(first_number, "+", second_number, "=", sum_result)
+print(first_number, "-", second_number, "=", difference)
+print(first_number, "×", second_number, "=", product)
+```
+
+## Getting Input from Users 🎤
+
+Make your programs interactive with `input()`:
+
+```python
+# Ask for user's name
+user_name = input("What's your name? ")
+print("Nice to meet you,", user_name + "!")
+
+# Ask for their age
+user_age = input("How old are you? ")
+print("Wow,", user_age, "is a great age!")
+```
+
+**Important:** `input()` always gives you a string, even if the user types numbers!
+
+### Converting Input to Numbers 🔄
+
+```python
+# Get a number from user
+age_text = input("Enter your age: ")
+age_number = int(age_text)  # Convert to integer
+
+# Now you can do math with it!
+years_until_30 = 30 - age_number
+print("You'll be 30 in", years_until_30, "years!")
+
+# Or do it in one line:
+height = float(input("Enter your height in feet: "))
+print("Your height is", height, "feet")
+```
+
+## Practical Exercise 💻
+
+Create a program called `my_info.py` that:
+1. Asks for your name, age, and favorite hobby
+2. Stores them in variables
+3. Displays a nice formatted message using those variables
+
+Example run:
+```
+What's your name? Sarah
+How old are you? 23
+What's your favorite hobby? reading
+
+Hello Sarah! You are 23 years old and you love reading. That's awesome!
+```
+
+## Challenge: Simple Calculator 🏆
+
+**Your Mission:** Build a calculator that asks for two numbers and shows all basic math operations!
+
+**Requirements:**
+- Ask user for two numbers
+- Convert them to proper number types
+- Calculate: addition, subtraction, multiplication, division
+- Display all results in a nice format
+
+**Example output:**
+```
+=== SIMPLE CALCULATOR ===
+Enter first number: 12
+Enter second number: 4
+
+Results:
+12 + 4 = 16
+12 - 4 = 8
+12 × 4 = 48
+12 ÷ 4 = 3.0
+```
+
+**Bonus points:** Add some decorative borders and make it look professional! 🎨
+
+## Understanding Type Checking 🔍
+
+You can check what type a variable is:
+
+```python
+name = "Alice"
+age = 25
+height = 5.7
+is_student = True
+
+print(type(name))      # <class 'str'>
+print(type(age))       # <class 'int'>
+print(type(height))    # <class 'float'>
+print(type(is_student)) # <class 'bool'>
+```
+
+## Common Mistakes to Avoid ⚠️
+
+1. **Forgetting quotes for strings:**
+```python
+# Wrong:
+name = Alice  # Error! Python looks for a variable called Alice
+
+# Right:
+name = "Alice"
+```
+
+2. **Not converting input:**
+```python
+# Wrong:
+age = input("Age: ")
+next_year = age + 1  # Error! Can't add number to string
+
+# Right:
+age = int(input("Age: "))
+next_year = age + 1
+```
+
+## Chapter Summary 📝
+
+🎉 **Great job!** You now know how to:
+- Create and use variables to store data
+- Work with different data types (strings, integers, floats, booleans)
+- Get input from users with `input()`
+- Convert between different data types
+- Build interactive programs that respond to user input
+
+**Key takeaways:**
+- Variables store data for reuse: `name = "Alice"`
+- Strings need quotes, numbers don't
+- `input()` always returns strings
+- Use `int()` and `float()` to convert strings to numbers
+- Variables make your code more flexible and maintainable
+
+Ready for Chapter 3? We'll learn cool ways to work with text and numbers! 🚀 

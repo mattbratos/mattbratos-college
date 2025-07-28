@@ -1,0 +1,472 @@
+---
+title: lists-and-collections
+order: 6
+---
+
+# Chapter 6: Lists and Collections 📝
+
+So far you've been working with one piece of data at a time. But what if you need to store multiple items? Meet **lists** - Python's way of keeping multiple values organized in one place! 📦
+
+## What are Lists? 🤔
+
+A list is like a shopping list or a playlist - it holds multiple items in order. You can add, remove, and change items whenever you want!
+
+```python
+# Creating lists
+fruits = ["apple", "banana", "orange"]
+numbers = [1, 2, 3, 4, 5]
+mixed_list = ["Alice", 25, True, 3.14]
+empty_list = []
+
+print(fruits)      # ['apple', 'banana', 'orange']
+print(numbers)     # [1, 2, 3, 4, 5]
+print(mixed_list)  # ['Alice', 25, True, 3.14]
+```
+
+## Accessing List Items 🔍
+
+Lists use **indexes** (positions) starting from 0:
+
+```python
+fruits = ["apple", "banana", "orange", "grape"]
+
+print(fruits[0])    # apple (first item)
+print(fruits[1])    # banana (second item)
+print(fruits[-1])   # grape (last item)
+print(fruits[-2])   # orange (second to last)
+
+# Get multiple items (slicing)
+print(fruits[1:3])  # ['banana', 'orange'] (items 1 and 2)
+print(fruits[:2])   # ['apple', 'banana'] (first 2 items)
+print(fruits[2:])   # ['orange', 'grape'] (from item 2 to end)
+```
+
+## Adding Items to Lists ➕
+
+```python
+# Start with an empty shopping list
+shopping_list = []
+
+# Add items one by one
+shopping_list.append("milk")
+shopping_list.append("eggs")
+shopping_list.append("bread")
+
+print(shopping_list)  # ['milk', 'eggs', 'bread']
+
+# Add multiple items
+shopping_list.extend(["apples", "cheese"])
+print(shopping_list)  # ['milk', 'eggs', 'bread', 'apples', 'cheese']
+
+# Insert at specific position
+shopping_list.insert(1, "butter")  # Insert at position 1
+print(shopping_list)  # ['milk', 'butter', 'eggs', 'bread', 'apples', 'cheese']
+```
+
+## Removing Items from Lists ➖
+
+```python
+fruits = ["apple", "banana", "orange", "banana", "grape"]
+
+# Remove by value (first occurrence)
+fruits.remove("banana")
+print(fruits)  # ['apple', 'orange', 'banana', 'grape']
+
+# Remove by index
+removed_item = fruits.pop(1)  # Removes and returns item at index 1
+print(f"Removed: {removed_item}")  # Removed: orange
+print(fruits)  # ['apple', 'banana', 'grape']
+
+# Remove last item
+last_item = fruits.pop()
+print(f"Last item: {last_item}")  # Last item: grape
+print(fruits)  # ['apple', 'banana']
+
+# Clear entire list
+fruits.clear()
+print(fruits)  # []
+```
+
+## Modifying Lists 🔧
+
+```python
+colors = ["red", "green", "blue"]
+
+# Change an item
+colors[1] = "yellow"
+print(colors)  # ['red', 'yellow', 'blue']
+
+# Change multiple items
+colors[1:3] = ["purple", "pink"]
+print(colors)  # ['red', 'purple', 'pink']
+
+# Sort the list
+numbers = [3, 1, 4, 1, 5, 9, 2]
+numbers.sort()
+print(numbers)  # [1, 1, 2, 3, 4, 5, 9]
+
+# Reverse the list
+numbers.reverse()
+print(numbers)  # [9, 5, 4, 3, 2, 1, 1]
+```
+
+## Useful List Methods and Functions 🛠️
+
+```python
+fruits = ["apple", "banana", "orange", "banana"]
+
+# Check if item exists
+print("banana" in fruits)      # True
+print("grape" in fruits)       # False
+
+# Count occurrences
+print(fruits.count("banana"))  # 2
+
+# Find index of item
+print(fruits.index("orange"))  # 2
+
+# Get list length
+print(len(fruits))             # 4
+
+# Get sum (for numbers)
+numbers = [1, 2, 3, 4, 5]
+print(sum(numbers))            # 15
+print(max(numbers))            # 5
+print(min(numbers))            # 1
+```
+
+## Looping Through Lists 🔄
+
+This is where lists really shine - you can process each item easily!
+
+```python
+# Method 1: Simple loop
+fruits = ["apple", "banana", "orange"]
+
+for fruit in fruits:
+    print(f"I love {fruit}!")
+
+# Method 2: Loop with index
+for i in range(len(fruits)):
+    print(f"Item {i}: {fruits[i]}")
+
+# Method 3: Enumerate (best of both worlds)
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+
+# Method 4: While loop
+i = 0
+while i < len(fruits):
+    print(fruits[i])
+    i += 1
+```
+
+## Interactive Examples 🧪
+
+### Example 1: Dynamic To-Do List
+```python
+todo_list = []
+
+while True:
+    print("\n=== TO-DO LIST ===")
+    print("Current tasks:")
+    
+    if len(todo_list) == 0:
+        print("No tasks yet!")
+    else:
+        for i, task in enumerate(todo_list, 1):
+            print(f"{i}. {task}")
+    
+    print("\nOptions:")
+    print("1. Add task")
+    print("2. Complete task")
+    print("3. Quit")
+    
+    choice = input("Choose an option: ")
+    
+    if choice == "1":
+        task = input("Enter new task: ")
+        todo_list.append(task)
+        print(f"Added: {task}")
+    
+    elif choice == "2":
+        if len(todo_list) > 0:
+            try:
+                task_num = int(input("Which task number to complete? "))
+                completed_task = todo_list.pop(task_num - 1)
+                print(f"Completed: {completed_task}")
+            except (ValueError, IndexError):
+                print("Invalid task number!")
+        else:
+            print("No tasks to complete!")
+    
+    elif choice == "3":
+        print("Goodbye!")
+        break
+    
+    else:
+        print("Invalid choice!")
+```
+
+### Example 2: Grade Calculator
+```python
+# Collect student grades
+grades = []
+print("Enter student grades (type 'done' when finished):")
+
+while True:
+    grade_input = input("Enter grade: ")
+    if grade_input.lower() == "done":
+        break
+    try:
+        grade = float(grade_input)
+        if 0 <= grade <= 100:
+            grades.append(grade)
+        else:
+            print("Grade must be between 0 and 100!")
+    except ValueError:
+        print("Please enter a valid number!")
+
+# Calculate statistics
+if len(grades) > 0:
+    average = sum(grades) / len(grades)
+    highest = max(grades)
+    lowest = min(grades)
+    
+    print(f"\n=== GRADE REPORT ===")
+    print(f"Total grades: {len(grades)}")
+    print(f"Average: {average:.2f}")
+    print(f"Highest: {highest}")
+    print(f"Lowest: {lowest}")
+    
+    # Count letter grades
+    a_count = len([g for g in grades if g >= 90])
+    b_count = len([g for g in grades if 80 <= g < 90])
+    c_count = len([g for g in grades if 70 <= g < 80])
+    d_count = len([g for g in grades if 60 <= g < 70])
+    f_count = len([g for g in grades if g < 60])
+    
+    print(f"\nGrade Distribution:")
+    print(f"A's: {a_count}")
+    print(f"B's: {b_count}")
+    print(f"C's: {c_count}")
+    print(f"D's: {d_count}")
+    print(f"F's: {f_count}")
+else:
+    print("No grades entered!")
+```
+
+### Example 3: Word Game
+```python
+# Guess the word game
+import random
+
+word_list = ["python", "programming", "computer", "keyboard", "monitor", "software"]
+secret_word = random.choice(word_list)
+guessed_letters = []
+wrong_guesses = []
+max_wrong = 6
+
+print("=== WORD GUESSING GAME ===")
+print(f"Guess the {len(secret_word)}-letter word!")
+
+while len(wrong_guesses) < max_wrong:
+    # Show current progress
+    display_word = ""
+    for letter in secret_word:
+        if letter in guessed_letters:
+            display_word += letter + " "
+        else:
+            display_word += "_ "
+    
+    print(f"\nWord: {display_word}")
+    print(f"Wrong guesses: {', '.join(wrong_guesses)}")
+    print(f"Guesses remaining: {max_wrong - len(wrong_guesses)}")
+    
+    # Check if won
+    if "_" not in display_word:
+        print(f"🎉 You won! The word was '{secret_word}'!")
+        break
+    
+    # Get guess
+    guess = input("Guess a letter: ").lower()
+    
+    if len(guess) != 1 or not guess.isalpha():
+        print("Please enter a single letter!")
+        continue
+    
+    if guess in guessed_letters or guess in wrong_guesses:
+        print("You already guessed that letter!")
+        continue
+    
+    # Check guess
+    if guess in secret_word:
+        guessed_letters.append(guess)
+        print("Good guess!")
+    else:
+        wrong_guesses.append(guess)
+        print("Wrong letter!")
+else:
+    print(f"💀 Game over! The word was '{secret_word}'")
+```
+
+## List Comprehensions (Bonus!) ⚡
+
+A super-cool Python feature to create lists in one line:
+
+```python
+# Traditional way
+squares = []
+for i in range(1, 6):
+    squares.append(i ** 2)
+
+# List comprehension way (much cooler!)
+squares = [i ** 2 for i in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+# More examples
+even_numbers = [i for i in range(20) if i % 2 == 0]
+print(even_numbers)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+fruits = ["apple", "banana", "orange"]
+upper_fruits = [fruit.upper() for fruit in fruits]
+print(upper_fruits)  # ['APPLE', 'BANANA', 'ORANGE']
+```
+
+## Working with Multiple Lists 🤝
+
+```python
+# Parallel lists (related data)
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+cities = ["New York", "Los Angeles", "Chicago"]
+
+# Print together using zip
+for name, age, city in zip(names, ages, cities):
+    print(f"{name} is {age} years old and lives in {city}")
+
+# Combine lists
+all_info = list(zip(names, ages, cities))
+print(all_info)  # [('Alice', 25, 'New York'), ('Bob', 30, 'Los Angeles'), ('Charlie', 35, 'Chicago')]
+```
+
+## Practical Exercises 💻
+
+### Exercise 1: List Statistics
+Create a program that:
+- Asks user to enter numbers until they type "done"
+- Stores numbers in a list
+- Calculates and displays: average, sum, count, min, max
+
+### Exercise 2: Shopping Cart
+Create a shopping cart program that:
+- Shows current items and prices
+- Allows adding/removing items
+- Calculates total cost
+- Shows receipt at the end
+
+## Challenge: Personal To-Do List App 🏆
+
+**Your Mission:** Create a comprehensive to-do list application with advanced features!
+
+**Core Requirements:**
+- Add tasks with descriptions
+- Mark tasks as complete/incomplete
+- Remove tasks
+- View all tasks with status indicators
+- Save progress (tasks persist between runs)
+
+**Advanced Features:**
+- Task priorities (High, Medium, Low)
+- Due dates for tasks
+- Categories/tags for tasks
+- Search functionality
+- Statistics (total tasks, completed %, etc.)
+- Export tasks to a text file
+
+**Bonus Features:**
+- Color-coded output based on priority/status
+- Reminder for overdue tasks
+- Task completion celebration messages
+- Undo last action
+- Backup and restore functionality
+
+**Example interaction:**
+```
+📝 === PERSONAL TO-DO MANAGER === 📝
+
+Current Tasks:
+1. [HIGH] 📚 Study Python (Due: Tomorrow) - ⏳ Pending
+2. [MED]  🛒 Buy groceries (Due: Today) - ⏳ Pending  
+3. [LOW]  📞 Call mom (Due: Sunday) - ✅ Complete
+
+Statistics:
+Total tasks: 3 | Completed: 1 (33%) | Pending: 2 (67%)
+
+Options:
+1. Add task
+2. Complete task
+3. Remove task
+4. Edit task
+5. Search tasks
+6. Show statistics
+7. Export tasks
+8. Quit
+
+Choice: 1
+
+Task description: Finish Python course
+Priority (H/M/L): H
+Due date (YYYY-MM-DD or 'none'): 2024-12-31
+Category (optional): Learning
+
+✅ Added: [HIGH] 📚 Finish Python course (Due: 2024-12-31) [Learning]
+```
+
+## Common List Mistakes ⚠️
+
+1. **Index out of range:**
+```python
+fruits = ["apple", "banana"]
+# print(fruits[5])  # Error! Index 5 doesn't exist
+
+# Better: Check length first
+if len(fruits) > 5:
+    print(fruits[5])
+else:
+    print("Index 5 doesn't exist")
+```
+
+2. **Modifying list while looping:**
+```python
+numbers = [1, 2, 3, 4, 5]
+
+# Wrong: Don't modify list while iterating
+# for num in numbers:
+#     if num % 2 == 0:
+#         numbers.remove(num)  # This can skip items!
+
+# Right: Create new list or iterate backwards
+even_numbers = [num for num in numbers if num % 2 == 0]
+```
+
+## Chapter Summary 📝
+
+🎉 **Outstanding work!** You've mastered:
+- Creating and accessing lists with indexes
+- Adding, removing, and modifying list items
+- Essential list methods (append, remove, pop, sort, etc.)
+- Looping through lists efficiently
+- Building interactive applications with lists
+- List comprehensions for advanced list creation
+- Working with multiple related lists
+
+**Key takeaways:**
+- Lists store multiple items in order, starting from index 0
+- Use `append()` to add items, `remove()` or `pop()` to delete
+- `for item in list:` is the most common way to loop through lists
+- Lists are mutable - you can change them after creation
+- Lists + loops = powerful data processing capabilities
+- Always check list length before accessing indexes
+
+Ready for Chapter 7? We'll learn about functions and build your final project - a personal assistant chatbot! 🤖🚀 

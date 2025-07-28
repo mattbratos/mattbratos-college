@@ -1,0 +1,257 @@
+---
+title: working-with-text-and-numbers
+order: 3
+---
+
+# Chapter 3: Working with Text and Numbers 🔢
+
+Time to level up! Let's learn how to manipulate text like a pro and perform cool calculations. You'll be amazed at what Python can do with strings and numbers! ✨
+
+## String Superpowers 🦸‍♀️
+
+Strings aren't just boring text - they have built-in superpowers called **methods**! Think of methods as special abilities that strings can perform.
+
+### String Methods in Action 🎬
+
+```python
+message = "Hello Python World"
+
+# Try these string superpowers:
+print(message.upper())        # HELLO PYTHON WORLD
+print(message.lower())        # hello python world
+print(message.title())        # Hello Python World
+print(message.replace("World", "Universe"))  # Hello Python Universe
+print(message.count("o"))     # 2 (counts how many 'o's)
+```
+
+### More Useful String Methods 🛠️
+
+```python
+name = "  alice johnson  "
+
+# Clean up messy text:
+print(name.strip())           # "alice johnson" (removes spaces)
+print(name.strip().title())   # "Alice Johnson" (clean + capitalize)
+
+# Check what's in your string:
+email = "user@example.com"
+print(email.startswith("user"))  # True
+print(email.endswith(".com"))     # True
+print("@" in email)               # True (checks if @ is in the string)
+```
+
+### String Formatting Magic ✨
+
+Instead of messy concatenation, use f-strings (formatted strings):
+
+```python
+name = "Sarah"
+age = 25
+city = "Boston"
+
+# Old way (works but messy):
+message = "Hi, I'm " + name + " and I'm " + str(age) + " years old from " + city
+
+# New way (clean and readable):
+message = f"Hi, I'm {name} and I'm {age} years old from {city}"
+print(message)
+
+# You can even do calculations inside f-strings!
+price = 19.99
+print(f"Total with tax: ${price * 1.08:.2f}")  # Rounds to 2 decimal places
+```
+
+### Interactive String Examples 🧪
+
+```python
+# Get user's full name and format it nicely
+first_name = input("Enter your first name: ").strip().title()
+last_name = input("Enter your last name: ").strip().title()
+
+full_name = f"{first_name} {last_name}"
+initials = f"{first_name[0]}.{last_name[0]}."
+
+print(f"Full name: {full_name}")
+print(f"Initials: {initials}")
+print(f"Username suggestion: {first_name.lower()}{len(last_name)}")
+```
+
+## Math Operations & Number Magic 🧮
+
+Python is a powerful calculator! Let's explore what you can do with numbers.
+
+### Basic Math Operations 🔢
+
+```python
+a = 15
+b = 4
+
+print(f"Addition: {a} + {b} = {a + b}")        # 19
+print(f"Subtraction: {a} - {b} = {a - b}")     # 11
+print(f"Multiplication: {a} × {b} = {a * b}")  # 60
+print(f"Division: {a} ÷ {b} = {a / b}")        # 3.75
+print(f"Floor Division: {a} // {b} = {a // b}") # 3 (no decimals)
+print(f"Modulus (remainder): {a} % {b} = {a % b}") # 3
+print(f"Exponent: {a} ** {b} = {a ** b}")      # 50625
+```
+
+### Useful Math Functions 📐
+
+```python
+import math  # Import the math module for extra functions
+
+number = -7.8
+
+print(f"Absolute value: {abs(number)}")        # 7.8
+print(f"Rounded: {round(3.7)}")               # 4
+print(f"Round to 2 places: {round(3.14159, 2)}") # 3.14
+print(f"Square root: {math.sqrt(16)}")        # 4.0
+print(f"Ceiling: {math.ceil(3.2)}")           # 4
+print(f"Floor: {math.floor(3.8)}")            # 3
+```
+
+### Number Formatting 💅
+
+```python
+big_number = 1234567.89
+percentage = 0.85
+
+# Format numbers nicely:
+print(f"Currency: ${big_number:,.2f}")         # $1,234,567.89
+print(f"Percentage: {percentage:.1%}")         # 85.0%
+print(f"Scientific: {big_number:.2e}")         # 1.23e+06
+```
+
+## Combining Text and Numbers 🤝
+
+```python
+# Calculate and display user stats
+name = input("What's your name? ").strip().title()
+birth_year = int(input("What year were you born? "))
+
+current_year = 2024
+age = current_year - birth_year
+next_birthday = age + 1
+
+# Create a nice report:
+report = f"""
+=== {name}'s Age Report ===
+Born: {birth_year}
+Current Age: {age} years old
+Next Birthday: You'll turn {next_birthday}!
+Days lived (approx): {age * 365:,} days
+Months lived (approx): {age * 12} months
+"""
+
+print(report)
+```
+
+## Practical Exercises 💻
+
+### Exercise 1: Text Processor
+Create a program that takes a sentence and shows:
+- Original sentence
+- Uppercase version
+- Lowercase version
+- Number of words
+- Number of characters (including spaces)
+- Number of characters (excluding spaces)
+
+### Exercise 2: Name Generator
+Ask for first and last name, then create:
+- Email suggestions (firstname.lastname@email.com)
+- Username suggestions (first letter + last name + random number)
+- Display name for social media
+
+## Challenge: Mad Libs Game Creator 🏆
+
+**Your Mission:** Create an interactive Mad Libs game that creates a funny story!
+
+**Requirements:**
+- Ask user for various inputs (nouns, verbs, adjectives, numbers)
+- Store them in variables with descriptive names
+- Create a story template using f-strings
+- Display the completed funny story
+- Make it colorful with decorative borders
+
+**Example interaction:**
+```
+=== MAD LIBS STORY CREATOR ===
+Enter a noun: elephant
+Enter a verb: dancing
+Enter an adjective: purple
+Enter a number: 42
+Enter a place: kitchen
+
+=== YOUR STORY ===
+Once upon a time, there was a purple elephant who loved dancing
+in the kitchen. Every day, it would practice for 42 hours until
+it became the most famous dancing elephant in the world!
+```
+
+**Bonus features:**
+- Use string methods to format inputs (capitalize, etc.)
+- Add multiple story templates and let user choose
+- Calculate and display story statistics (word count, character count)
+
+## Advanced String Techniques 🎯
+
+```python
+# String slicing (getting parts of strings)
+phrase = "Python Programming"
+print(phrase[0])        # P (first character)
+print(phrase[-1])       # g (last character)
+print(phrase[0:6])      # Python (characters 0 to 5)
+print(phrase[7:])       # Programming (from position 7 to end)
+
+# Split strings into lists
+sentence = "I love Python programming"
+words = sentence.split()  # ['I', 'love', 'Python', 'programming']
+print(f"Word count: {len(words)}")
+
+# Join lists back into strings
+new_sentence = " ".join(words)  # Put words back together
+print(new_sentence)
+```
+
+## Working with User Input Like a Pro 🎭
+
+```python
+def get_clean_input(prompt):
+    """Get input from user and clean it up"""
+    return input(prompt).strip().title()
+
+def get_number_input(prompt):
+    """Get a number from user with error handling"""
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Please enter a valid number!")
+
+# Use these functions for better user experience
+name = get_clean_input("Enter your name: ")
+age = int(get_number_input("Enter your age: "))
+height = get_number_input("Enter your height in feet: ")
+
+print(f"Hello {name}! You are {age} years old and {height} feet tall.")
+```
+
+## Chapter Summary 📝
+
+🎉 **Fantastic progress!** You've mastered:
+- String methods for text manipulation (upper, lower, replace, strip, etc.)
+- F-string formatting for clean, readable code
+- Advanced math operations and number formatting
+- Combining text and numbers effectively
+- String slicing and advanced text processing
+- Creating interactive programs with proper input handling
+
+**Key takeaways:**
+- String methods make text processing powerful and easy
+- F-strings: `f"Hello {name}"` are the best way to format strings
+- Python has tons of built-in math functions
+- Always clean and format user input for better user experience
+- Combining text and numbers opens up endless possibilities
+
+Ready for Chapter 4? We'll learn how to make your programs smart with decision-making! 🤔🚀 

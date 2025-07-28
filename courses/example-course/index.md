@@ -13,6 +13,8 @@ tags:
 
 # api 101 for junior web devs
 
+<p><a href="https://carta.com/uk/en/learn/startup-fundraising-101/1/?wvideo=ft5h0rgrc2"><img src="https://embed-ssl.wistia.com/deliveries/c6af75ddadbf9c295de05e06d26bd3c1.jpg?image_play_button_size=2x&image_crop_resized=960x540&image_play_button_rounded=1&image_play_button_color=5489ade0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://carta.com/uk/en/learn/startup-fundraising-101/1/?wvideo=ft5h0rgrc2">SF101_L01 - Course Overview - DELIVERY</a></p>
+
 ## target audience - junior web devs
 This course is for junior web programmers with basic web programming knowledge, react and nextjs but who want to get better at APIs.
 
